@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Header } from "../src/components/Header";
 import { CodeEditor } from "../src/components/Editor";
 import { ResultModal } from "../src/components/ResultModal";
+import { TestPanel } from "../src/components/TestPanel";
 import { getDailyChallenge, Challenge } from "../src/lib/challenges";
 import { validateCode, ValidationResult } from "../src/lib/validation";
 import { useProgress } from "../src/hooks/useProgress";
@@ -97,22 +98,7 @@ export default function Home() {
 
           <CodeEditor code={code} onChange={setCode} readOnly={completed} />
 
-          {/* Validation Results Text Block */}
-          {validationResult && !validationResult.success && (
-            <div className="w-full bg-red-500/10 border border-red-500/20 rounded-xl p-4 code-font text-sm text-red-400">
-              {validationResult.error ? (
-                <div>{validationResult.error}</div>
-              ) : (
-                validationResult.results.filter(r => !r.passed).map((r, i) => (
-                  <div key={i} className="mb-2">
-                    <span className="font-bold">Failed input:</span> {JSON.stringify(r.input)}<br />
-                    <span className="font-bold">Expected:</span> {JSON.stringify(r.expected)} <br />
-                    <span className="font-bold">Actual:</span> {JSON.stringify(r.actual)}
-                  </div>
-                ))
-              )}
-            </div>
-          )}
+          <TestPanel challenge={challenge} validationResult={validationResult} />
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex gap-4 w-full max-w-sm">
