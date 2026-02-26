@@ -62,30 +62,7 @@ export default function Home() {
     <>
       <Header streak={progress.currentStreak} />
 
-      {/* Mocked Game Background (Dimmed) exactly from Stitch */}
-      <div className="fixed inset-0 z-0 flex flex-col items-center justify-center opacity-20 pointer-events-none">
-        <div className="grid grid-cols-5 gap-2 mb-4">
-          <div className="w-12 h-12 bg-primary/20 border-2 border-primary/30 rounded"></div>
-          <div className="w-12 h-12 bg-primary border-2 border-primary rounded"></div>
-          <div className="w-12 h-12 bg-primary/20 border-2 border-primary/30 rounded"></div>
-          <div className="w-12 h-12 bg-primary/20 border-2 border-primary/30 rounded"></div>
-          <div className="w-12 h-12 bg-primary/20 border-2 border-primary/30 rounded"></div>
-        </div>
-        <div className="grid grid-cols-5 gap-2 mb-4">
-          <div className="w-12 h-12 bg-primary border-2 border-primary rounded"></div>
-          <div className="w-12 h-12 bg-primary border-2 border-primary rounded"></div>
-          <div className="w-12 h-12 bg-primary border-2 border-primary rounded"></div>
-          <div className="w-12 h-12 bg-primary border-2 border-primary rounded"></div>
-          <div className="w-12 h-12 bg-primary border-2 border-primary rounded"></div>
-        </div>
-        <div className="grid grid-cols-5 gap-2 mb-4">
-          <div className="w-12 h-12 bg-primary/10 border-2 border-slate-700 rounded"></div>
-          <div className="w-12 h-12 bg-primary/10 border-2 border-slate-700 rounded"></div>
-          <div className="w-12 h-12 bg-primary/10 border-2 border-slate-700 rounded"></div>
-          <div className="w-12 h-12 bg-primary/10 border-2 border-slate-700 rounded"></div>
-          <div className="w-12 h-12 bg-primary/10 border-2 border-slate-700 rounded"></div>
-        </div>
-      </div>
+
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8 max-w-4xl mx-auto w-full z-10 relative">

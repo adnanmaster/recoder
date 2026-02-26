@@ -79,10 +79,7 @@ export function ResultModal({ isOpen, onClose, dayIndex, attempts, streak }: Res
                     {/* Social Share / Results Mock */}
                     <div className="w-full space-y-4">
                         <div className="bg-slate-100 dark:bg-background-dark/50 p-4 rounded-lg flex flex-col items-center justify-center border border-dashed border-primary/30">
-                            <div className="text-xl tracking-widest mb-2 select-none text-center">
-                                🟩🟩⬜🟩<br />
-                                🟩🟩🟩🟩
-                            </div>
+
                             <button
                                 onClick={generateShareText}
                                 className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-background-dark font-bold rounded-lg hover:brightness-110 active:scale-[0.98] transition-all"
